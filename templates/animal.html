@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animal</title>
+</head>
+<body>
+<h1>Животные</h1>
+<hr>
+{% for i in new_animal %}
+<h2>{{ i.id }}</h2>
+<h2>Имя животного: <a href="{{ i.id }}"> {{ i.name }} </a></h2>
+<h2>Возраст: {{ i.age }} </h2>
+<h2>Порода: {{ i.breed_category }} </h2>
+<h2><a href="/products/delete-animal/{{ i.id }}/">Удалить</a></h2>
+<hr>
+{% endfor %}
+</body>
+</html>

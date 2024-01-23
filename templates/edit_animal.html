@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Animal</title>
+</head>
+<body>
+<h1>Edit Animal</h1>
+<form action="/products/edit-animal/{{animal.id}}" method="POST">
+    {% csrf_token %} {{ form.as_p }}
+<label for="name">Name:</label>
+<input type="text"  id="name" name="name" value="{{animal.name}}"><br>
+
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" value="{{animal.age}}" ><br>
+
+<label for="breed">Breed:</label>
+<input type="text" id="breed" name="breed" value="{{animal.breed}}"><br>
+<input type="submit" value="Edit">
+</form>
+</body>
+</html>
