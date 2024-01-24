@@ -68,7 +68,6 @@ def questions(request):
 #     new_women = {'menu': menu, 'form': form}
 #     return render(request, 'add_women.html', context=new_women)
 
-
 def add_women(request):
     if request.method == "POST":
         form = AddPostForm(request.POST, request.FILES)
